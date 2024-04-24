@@ -1,6 +1,6 @@
 # Vite React Template
 
-Starter template with all the basic libs configured
+Starter template with all the basic libs configured and deployment to GitHub Page
 
 ## Getting Started
 
