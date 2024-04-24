@@ -1,6 +1,6 @@
 # Vite React Template
 
-Starter template with all the basic libs configured and deployment to GitHub Page
+This is a starter template with all the basic libraries configured and deployment to GitHub Pages.
 
 ## Getting Started
 
@@ -10,30 +10,30 @@ Starter template with all the basic libs configured and deployment to GitHub Pag
 pnpm install
 ```
 
-### Running dev server
+### Running the Development Server
 
 ```sh
-pnpm install
+pnpm dev
 ```
 
-### Extracting translations
+### Extracting Translations
 
 ```sh
 pnpm translations:extract
 ```
 
-#### How to work with [Intl](https://formatjs.io/) translations
+#### How to Work with [Intl](https://formatjs.io/) Translations
 
 #### Configuration
 
-- The extraction/generation is configured in `/src/lang/processLanguages.js`
-- You have to set the primary language `PRIMARY_LOCALE`
-- And into `SECONDARY_LOCALES`, write all the other languages you want to use (as a locale strings)
+- The extraction/generation is configured in `/src/lang/processLanguages.js`.
+- Set the primary language using `PRIMARY_LOCALE`.
+- Add other languages you want to use into `SECONDARY_LOCALES` as locale strings.
 
-##### Basic translation creation
+##### Basic Translation Creation
 
-- Default message is always in the primary language
-- ids need to be unique
+- The default message is always in the primary language.
+- Ensure IDs are unique.
 
 ```ts
 const intl = useIntl();
@@ -46,18 +46,18 @@ intl.formatMessage({
 });
 ```
 
-##### Translation extraction
+##### Translation Extraction
 
-- Extraction will take all the Intl translations throughout the code and export them into `/src/lang/messages/{locale}.json`
-- The file for the primary language will be filled, the other ones will be empty (ids with empty strings)
-- Once you fill the other languages, the translations will persist future extractions
-- When you remove a translation from the application, it will be removed from all the translation files during the next extraction
+- Extraction will gather all the Intl translations throughout the code and export them into `/src/lang/messages/{locale}.json`.
+- The primary language file will be filled, while the others will have empty strings as IDs.
+- Once you fill the other languages, the translations will persist future extractions.
+  Removing a translation from the application will remove it from all translation files during the next extraction.
 
 ```sh
 pnpm translations:extract
 ```
 
-## Featured libs
+## Featured Libraries and Tools
 
 - [Vite with TypeScript](https://vitejs.dev/)
 - [shadcn](https://ui.shadcn.com/)
@@ -70,7 +70,7 @@ pnpm translations:extract
 - [ESLint](https://www.npmjs.com/package/eslint-plugin-react)
 - [Prettier](https://prettier.io/)
 
-## VS Code extensions
+## VS Code Extensions
 
 - [Headwind](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
